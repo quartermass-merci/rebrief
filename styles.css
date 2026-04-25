@@ -166,7 +166,7 @@ strong { font-weight: 700; }
 }
 .brand-mark {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.85rem;
   font-weight: 900;
   letter-spacing: var(--tracking);
   text-transform: uppercase;
@@ -175,12 +175,12 @@ strong { font-weight: 700; }
 }
 .primary-nav {
   display: flex;
-  gap: clamp(1.25rem, 3vw, 2.75rem);
+  gap: clamp(1.5rem, 3vw, 3rem);
   font-family: var(--font-display);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: var(--tracking);
-  font-size: 0.88rem;
+  font-size: 1.15rem;
   color: var(--gold);
 }
 .primary-nav a {
@@ -314,11 +314,11 @@ strong { font-weight: 700; }
 .hero-meta .sep { opacity: 0.4; }
 .hero-nav {
   display: flex;
-  gap: clamp(1.2rem, 2.5vw, 2.5rem);
+  gap: clamp(1.5rem, 2.5vw, 2.75rem);
   font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: var(--tracking);
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--gold);
 }
@@ -2098,7 +2098,13 @@ strong { font-weight: 700; }
 }
 .tier-feature {
   position: relative;
-  padding: 1.5rem 1.4rem 1.25rem !important;
+  padding: 1.25rem 1.25rem 1.1rem !important;
+  gap: 0.7rem !important;
+}
+.tier-feature .tier-perks {
+  font-size: 0.95rem !important;
+  gap: 0.4rem !important;
+  line-height: 1.3 !important;
 }
 .tier-feature-stamp {
   position: absolute;
@@ -2434,12 +2440,12 @@ strong { font-weight: 700; }
 }
 .tier-perks {
   display: grid;
-  gap: 0.45rem;
+  gap: 0.4rem;
   font-family: var(--font-body);
-  font-size: 0.92rem;
-  line-height: 1.35;
+  font-size: 0.95rem;
+  line-height: 1.3;
   letter-spacing: var(--tracking);
-  flex: 1;
+  flex: 0 0 auto;
   color: var(--ink);
 }
 .tier-perks li {
@@ -2484,8 +2490,26 @@ strong { font-weight: 700; }
 .tier[data-tier="headline"] .tier-name { border-color: var(--paper); }
 .tier[data-tier="headline"] .tier-availability { border-color: var(--paper); color: var(--paper); }
 .tier[data-tier="headline"] .tier-perks li::before { color: var(--yellow); }
-.tier[data-tier="headline"] .tier-cta { border-color: var(--paper); color: var(--paper); }
+.tier[data-tier="headline"] .tier-cta {
+  border: 0;
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 900;
+  padding: 1rem 1.2rem !important;
+}
 .tier[data-tier="headline"] .tier-cta:hover { background: var(--paper); color: var(--green); }
+.tier-cta-feature {
+  background: var(--yellow) !important;
+  color: var(--ink) !important;
+  border: 0 !important;
+  font-weight: 900;
+  padding: 1.1rem 1.3rem !important;
+  font-size: 1rem !important;
+}
+.tier-cta-feature:hover {
+  background: var(--paper) !important;
+  color: var(--green) !important;
+}
 
 .ledger-body {
   max-width: 64ch;
