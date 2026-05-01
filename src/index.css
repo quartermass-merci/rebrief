@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* Roboto loaded via <link> in index.html for parallel preconnect + correct CSS @import order. */
+
 @font-face {
   font-family: 'Nord';
   src: url('/fonts/Nord.otf') format('opentype');
@@ -24,15 +26,31 @@
   font-style: normal;
 }
 
+/* Nicholas trial is missing digits 0 and 1 — exclude via unicode-range so those glyphs fall through to Georgia */
+@font-face {
+  font-family: 'Nicholas';
+  src: url('/fonts/nicholas-regular.otf') format('opentype'),
+       url('/fonts/nicholas-regular.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  unicode-range: U+0020-002F, U+0032-0039, U+003A-007E, U+00A0-024F, U+2000-206F, U+2070, U+2074-209F, U+20A0-20CF, U+2100-214F;
+}
+
 @theme {
   --font-nord: 'Nord', sans-serif;
   --font-vanity-condensed: 'Vanity Condensed', serif;
   --font-vanity-expanded: 'Vanity Expanded', serif;
-  --font-mono: 'Roboto Mono', ui-monospace, monospace;
+  --font-body: 'Roboto', system-ui, -apple-system, sans-serif;
 
-  --color-rebrief-cream: #f5f1ed;
-  --color-rebrief-light: #f4f4f4;
-  --color-rebrief-gold: #b4a65b;
+  /* Paper-shade — slightly darker page for sponsor/pillar moments */
+  --color-rebrief-cream: #f0ebdf;
+  /* Paper — warm-tinted near-white, dominant page bg */
+  --color-rebrief-light: #fbfaf6;
+  /* Gold (4.93:1 on white) — for nav, links, CTAs, eyebrows on light backgrounds. WCAG AA compliant. */
+  --color-rebrief-gold: #7a6f3a;
+  /* Gold-bright (8.55:1 on black) — for use ONLY on dark backgrounds. Original brand value. */
+  --color-rebrief-gold-bright: #b4a65b;
   --color-rebrief-red: #ef4522;
   --color-rebrief-dark: #212121;
 }
@@ -51,6 +69,62 @@
 
   ::selection {
     background-color: var(--color-rebrief-gold);
-    color: #000;
+    color: #fff;
+  }
+
+  /* Global focus-visible — keyboard users always see where they are.
+     Falls back to dark on light bgs; components can override with --color-rebrief-gold for context. */
+  :focus { outline: none; }
+  :focus-visible {
+    outline: 2px solid var(--color-rebrief-dark);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+  /* On dark bgs, switch to bright gold for visibility */
+  .bg-black :focus-visible,
+  .bg-rebrief-dark :focus-visible,
+  [class*="bg-rebrief-dark"] :focus-visible {
+    outline-color: var(--color-rebrief-gold-bright);
   }
 }
+
+/* Respect users who prefer reduced motion — static editorial reading experience. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Printer's register marks — small editorial detail at the corners of media viewers.
+   Static, subtle, recognizable to anyone who's prepped a print file. */
+.register-marks {
+  position: relative;
+}
+.register-marks::before,
+.register-marks::after,
+.register-marks > .register-tl,
+.register-marks > .register-tr,
+.register-marks > .register-bl,
+.register-marks > .register-br {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--color-rebrief-dark) 0 100%),
+    linear-gradient(to bottom, var(--color-rebrief-dark) 0 100%);
+  background-position: center, center;
+  background-size: 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+}
+.register-marks::before { top: -22px; left: -22px; }
+.register-marks::after  { top: -22px; right: -22px; }
+.register-marks > .register-bl { bottom: -22px; left: -22px; }
+.register-marks > .register-br { bottom: -22px; right: -22px; }
