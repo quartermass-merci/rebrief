@@ -4,12 +4,12 @@ const SUBSTACK_URL =
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
-      <div className="max-w-[1440px] mx-auto px-8 sm:px-13 py-15">
-        <div className="flex flex-col gap-20">
+      <div className="max-w-[1440px] mx-auto px-8 sm:px-13 pt-16 pb-8">
+        <div className="flex flex-col gap-12">
           {/* Subscribe CTA */}
-          <div className="flex flex-col gap-5">
-            <h2 className="font-vanity-expanded text-[clamp(2.5rem,5.8vw,83.42px)] leading-[1.05]">
-              SUBSCRIBE TO{' '}
+          <div className="flex flex-col gap-6">
+            <h2 className="font-vanity-expanded text-[clamp(2.2rem,5.5vw,75px)] leading-[1.05]">
+              SUBSCRIBE TO
               <br />
               THE REBRIEF SUBSTACK
             </h2>
@@ -23,14 +23,25 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Wordmark */}
-          <div>
-            <img
-              src="/images/rebrief-masthead.png"
-              alt="Rebrief"
-              className="w-full max-w-[1312px] h-auto opacity-90"
-            />
+          {/* Massive REBRIEF wordmark */}
+          <div className="flex items-end gap-6 flex-wrap">
+            <h2
+              className="font-vanity-expanded text-white leading-[0.85] tracking-[-0.02em]"
+              style={{ fontSize: 'clamp(5rem, 18vw, 17rem)' }}
+            >
+              REBRIEF
+            </h2>
+            <p
+              className="font-vanity-condensed uppercase tracking-[0.05em] pb-3"
+              style={{ fontSize: 'clamp(0.8rem, 1.3vw, 1.25rem)' }}
+            >
+              A New Canadian Journal{' '}
+              <span className="italic font-serif normal-case">of</span>{' '}
+              Advertising
+            </p>
           </div>
+
+          <hr className="border-white/40" />
 
           {/* Bottom bar */}
           <div className="flex items-center justify-between flex-wrap gap-4">
