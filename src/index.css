@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Nord';
+  src: url('/fonts/Nord.otf') format('opentype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vanity Condensed';
+  src: url('/fonts/TRIAL-Vanity-Condensed.otf') format('opentype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vanity Expanded';
+  src: url('/fonts/TRIAL-Vanity-Expanded.otf') format('opentype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@theme {
+  --font-nord: 'Nord', sans-serif;
+  --font-vanity-condensed: 'Vanity Condensed', serif;
+  --font-vanity-expanded: 'Vanity Expanded', serif;
+  --font-mono: 'Roboto Mono', ui-monospace, monospace;
+
+  --color-rebrief-cream: #f5f1ed;
+  --color-rebrief-light: #f4f4f4;
+  --color-rebrief-gold: #b4a65b;
+  --color-rebrief-red: #ef4522;
+  --color-rebrief-dark: #212121;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-rebrief-light);
+    color: var(--color-rebrief-dark);
+  }
+
+  ::selection {
+    background-color: var(--color-rebrief-gold);
+    color: #000;
+  }
+}
