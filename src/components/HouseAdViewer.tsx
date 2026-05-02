@@ -75,18 +75,6 @@ export default function HouseAdViewer() {
         <span aria-hidden="true" className="register-bl" />
         <span aria-hidden="true" className="register-br" />
 
-        {/* Deadline note */}
-        <div className="flex justify-end pb-4 lg:pb-6 mb-6 lg:mb-8 border-b border-rebrief-dark/15">
-          <div className="text-right">
-            <p className="font-vanity-condensed text-[10px] uppercase tracking-[0.18em] text-rebrief-red">
-              Files Due
-            </p>
-            <p className="font-body text-rebrief-dark text-[13px] mt-1">
-              May 31, 2026
-            </p>
-          </div>
-        </div>
-
         {/* Expanding-panel slider — pure CSS hover, no state, no jank */}
         <div
           className="hidden md:flex items-stretch gap-1.5 h-[820px] w-full"
