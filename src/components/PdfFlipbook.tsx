@@ -31,9 +31,11 @@ export default function PdfFlipbook({
 
   useEffect(() => {
     if (!pageContainerRef.current) return
+    // Initial measurement — don't wait for first resize event.
+    setPageWidth(pageContainerRef.current.getBoundingClientRect().width)
     const ro = new ResizeObserver((entries) => {
       const w = entries[0]?.contentRect.width ?? 0
-      setPageWidth(w)
+      if (w > 0) setPageWidth(w)
     })
     ro.observe(pageContainerRef.current)
     return () => ro.disconnect()
