@@ -32,17 +32,13 @@ export default function Footer() {
             />
           </div>
 
-          {/* Bottom bar — folio + colophon row */}
-          <div className="flex flex-col gap-3">
-            <p className="font-body italic text-white/55 text-[12px] tracking-[0.08em] uppercase">
-              Imprinted Tkaronto · 43°38′N · 79°25′W
+          {/* Bottom bar — colophon row */}
+          <div className="flex items-center justify-between flex-wrap gap-4 max-w-[675px]">
+            <p className="font-body text-[17px] tracking-[0.02em]">
+              <span className="italic">&copy;</span> Rebrief Magazine Society
+              2026
             </p>
-            <div className="flex items-center justify-between flex-wrap gap-4 max-w-[675px]">
-              <p className="font-body text-[17px] tracking-[0.02em]">
-                <span className="italic">&copy;</span> Rebrief Magazine Society
-                2026
-              </p>
-              <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1">
                 <a
                   href="https://www.instagram.com/rebriefmagazine/"
                   target="_blank"
@@ -69,7 +65,6 @@ export default function Footer() {
                     className="w-[30px] h-[30px]"
                   />
                 </a>
-              </div>
             </div>
           </div>
         </div>

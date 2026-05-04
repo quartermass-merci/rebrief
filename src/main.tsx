@@ -14,7 +14,7 @@ console.log(
   'font: italic 12px/1.4 system-ui; color: #7a6f3a;',
 )
 console.log(
-  '%cSet in Vanity Condensed, Vanity Expanded, Nicholas, Nord & Roboto.\nImprinted Tkaronto · 43°38′N · 79°25′W',
+  '%cSet in Vanity Condensed, Vanity Expanded, Nicholas, Nord & Roboto.',
   'font: 11px/1.5 system-ui; color: #555; padding-bottom: 6px;',
 )
 console.log(
