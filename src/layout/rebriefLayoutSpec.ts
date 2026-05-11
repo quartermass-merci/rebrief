@@ -74,7 +74,7 @@ export const desktop: LayoutSpec = {
         canadaTitleImage: { x: 155, y: 333, width: 445, height: 95 },
         subhead:          { x: 349, y: 487, width: 530, height: 44 },
         bodyCopy:         { x: 349, y: 545, width: 420, height: 300 },
-        launchLine:       { x: 349, y: 784, width: 260, height: 24 },
+        launchLine:       { x: 349, y: 785, width: 260, height: 24 },
         starLarge:        { x: 630, y: -102, width: 754, height: 716 },
         starSmall:        { x: 865, y: 437, width: 438, height: 414 },
       },
