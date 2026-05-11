@@ -127,93 +127,96 @@ export const mobile: LayoutSpec = {
   targetWidth: 402,
   sections: {
 
+    /* navbar-mobile.svg  402×66 (rect 402×55 + 11px shadow) */
     header: {
-      height: 56,
-      background: 'rgba(240,236,228,0.94)',
+      height: 55,
+      background: '#f4f4f4',
       overflow: 'hidden',
       objects: {
+        hamburger: { x: 30,  y: 22, width: 18,  height: 14 },
         logo:      { x: 141, y: 14, width: 120, height: 28 },
-        hamburger: { x: 16,  y: 16, width: 24,  height: 24 },
       },
     },
 
+    /* hero-composite-mobile.png  402×640 */
     hero: {
-      height: 640,
+      height: 638,
       background: 'transparent',
       overflow: 'hidden',
       objects: {
-        heroComposite: { x: 0, y: 0, width: 402, height: 640 },
+        heroComposite: { x: 0, y: 0, width: 402, height: 638 },
       },
     },
 
+    /* about-title-mobile-composite.png 342×492 (title + face baked together) */
     about: {
       height: 1006,
-      background: '#efefec',
+      background: '#f4f4f4',
       overflow: 'visible',
       objects: {
-        introLine:       { x: 24, y: 40,  width: 354, height: 50 },
-        aboutTitleImage: { x: 24, y: 110, width: 354, height: 84 },
-        copyBlock:       { x: 24, y: 220, width: 354, height: 300 },
-        faceImage:       { x: 60, y: 660, width: 280, height: 297, zIndex: 5 },
+        introLine:          { x: 24, y: 40,  width: 354, height: 30 },
+        titleFaceComposite: { x: 30, y: 110, width: 342, height: 492 },
+        copyBlock:          { x: 24, y: 665, width: 354, height: 325 },
       },
     },
 
+    /* canada-text-mobile.png 342×493, canada-star-mobile.png 339×530 */
     currentIssue: {
       height: 628,
       background: '#222323',
       overflow: 'hidden',
       objects: {
-        issueLabel:       { x: 24,  y: 80,  width: 200, height: 22 },
-        canadaTitleImage: { x: 24,  y: 118, width: 354, height: 76 },
-        subhead:          { x: 24,  y: 216, width: 354, height: 26 },
-        bodyCopy:         { x: 24,  y: 260, width: 354, height: 180 },
-        launchLine:       { x: 24,  y: 460, width: 300, height: 18 },
-        starLarge:        { x: 200, y: 280, width: 220, height: 209 },
+        canadaTextImage: { x: 30,  y: 70,  width: 342, height: 493 },
+        starLarge:       { x: 55, y: -189, width: 347, height: 543 },
       },
     },
 
+    /* sponsorship-title-mobile.png 326×177, sponsorship-bubble-mobile.png 326×247 */
     sponsorship: {
       height: 688,
-      background: '#f0ebdf',
-      overflow: 'hidden',
+      background: '#f4f4f4',
+      overflow: 'visible',
       objects: {
-        sponsorshipTitleImage: { x: 24, y: 40,  width: 354, height: 192 },
-        copyBlock:             { x: 24, y: 250, width: 354, height: 160 },
-        speechBubbleImage:     { x: 60, y: 420, width: 280, height: 383 },
+        sponsorshipTitleImage: { x: 38,  y: 40,  width: 326, height: 177 },
+        copyBlock:             { x: 24,  y: 280, width: 354, height: 237 },
+        speechBubbleImage:     { x: 38,  y: 548, width: 326, height: 247 },
       },
     },
 
+    /* masthead-texture-mobile.png 402×1050 (top 705px), masthead-names-mobile.svg 342×454 */
     getInTouchMasthead: {
-      height: 525,
+      height: 705,
       background: '#3a3a3a',
       overflow: 'hidden',
       objects: {
-        mastheadTexture:    { x: 0,  y: 0,  width: 402, height: 525 },
-        mastheadNamesImage: { x: 24, y: 40, width: 354, height: 432 },
+        mastheadTexture:    { x: 0,  y: 0,   width: 402, height: 705 },
+        mastheadNamesImage: { x: 30, y: 200, width: 342, height: 454 },
       },
     },
 
+    /* masthead-texture-mobile.png (bottom 344px), get-in-touch-flyer-mobile.png 386×385 */
     getInTouchFlyer: {
-      height: 524,
+      height: 344,
       background: '#4a4a4a',
-      overflow: 'hidden',
+      overflow: 'visible',
       objects: {
-        paperTexture: { x: 0,  y: 0,  width: 402, height: 524 },
-        flyerImage:   { x: 24, y: 40, width: 354, height: 323 },
+        paperTexture: { x: 0, y: 0,   width: 402, height: 344 },
+        flyerImage:   { x: 8, y: 45, width: 386, height: 385 },
       },
     },
 
+    /* footer-rebrief-logo-composite-mobile.svg 342×151, footerStationery-mobile.png 386×523 */
     footer: {
       height: 645,
-      background: '#fbfaf6',
+      background: '#f4f4f4',
       overflow: 'hidden',
       objects: {
-        wordmark:              { x: 24, y: 60,  width: 354, height: 117 },
-        magazineSocietyLockup: { x: 24, y: 190, width: 200, height: 66 },
-        leftCopy:              { x: 24, y: 280, width: 354, height: 80 },
-        contactBlock:          { x: 24, y: 380, width: 354, height: 60 },
-        subscribeBlock:        { x: 24, y: 460, width: 354, height: 50 },
-        emailInput:            { x: 24, y: 530, width: 354, height: 48 },
+        footerStationery: { x: 8, y: 0, width: 386, height: 74 },
+        logoComposite:   { x: 30, y: 74,  width: 342, height: 151 },
+        leftCopy:        { x: 28, y: 262, width: 354, height: 85 },
+        contactBlock:    { x: 28, y: 364, width: 354, height: 80 },
+        subscribeBlock:  { x: 28, y: 491, width: 354, height: 20 },
+        emailInput:      { x: 28, y: 545, width: 354, height: 48 },
       },
     },
 
