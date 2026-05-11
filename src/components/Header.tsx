@@ -60,8 +60,8 @@ export default function Header() {
               href={item.href}
               style={{
                 fontFamily: 'var(--font-vanity-condensed)',
-                fontSize: 14,
-                lineHeight: 1.1,
+                fontSize: 22,
+                lineHeight: 1,
                 letterSpacing: '0.04em',
                 textTransform: 'uppercase' as const,
                 color: '#212121',

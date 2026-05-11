@@ -36,7 +36,7 @@ export const desktop: LayoutSpec = {
 
     header: {
       height: 74,
-      background: 'rgba(240,236,228,0.94)',
+      background: '#ffffff',
       overflow: 'hidden',
       objects: {
         logo:       { x: 157, y: 15, width: 138, height: 44 },
