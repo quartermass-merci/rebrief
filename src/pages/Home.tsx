@@ -258,7 +258,9 @@ export default function Home() {
             <p>
               See our{' '}
               <a
-                href="mailto:hello@rebrief.ca"
+                href="https://docs.google.com/presentation/d/1eWVAVwSRWv6a1V00ezfZfrk3A8CM96rN9Lx26tGQftc/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   color: 'var(--copper, #ac6120)',
                   textDecoration: 'underline',
